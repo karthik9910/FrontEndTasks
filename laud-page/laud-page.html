@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Content</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: black;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        max-width: 1000px;
+        margin: 20px auto;
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    div[id="container2"] {
+        max-width: 210px;
+        margin: 1px auto;
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        font-size: smaller;
+        float: left; 
+        /* display: flex;  */
+        justify-content: space-between;
+    }
+
+    div[id="container3"] { 
+        font-family: Arial, sans-serif;
+        max-width: 550px;
+        margin: 10px auto;
+        background-color: black;
+        color: white;
+        padding: 60px;
+        border-radius: 10px;
+        box-shadow: white;
+        font-size: small;
+        float: left; 
+        display: flex; 
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        text-align: left;
+
+    } 
+
+
+ 
+
+    h2 {
+        text-align: left;
+        color: #333;
+    }
+
+    h1 {
+        text-align: center;
+        color: white;
+    }
+
+    span {
+        display: block;
+        /* Change to block level to center */
+        text-align: center;
+        /* Center-align the content */
+        color: white;
+        font-size: smaller;
+    }
+
+    .fa-star.checked {
+        display: block;
+        /* Change to block level to center */
+        text-align: center;
+        /* Center-align the content */
+        color: white;
+        font-size: large;
+    }
+
+    #content {
+        margin-top: 20px;
+        line-height: 1.6;
+    }
+
+    p {
+        font-size: medium;
+        text-align: left;
+    }
+
+    img {
+        width: 350px;
+        height: 350px;
+        float: right;
+    }
+
+    /* Button styles */
+    .button {
+        display: inline-block;
+        padding: 10px 20px;
+        margin-right: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        text-align: center;
+    }
+
+    /* Grey button */
+    .grey {
+        background-color: grey;
+        color: white;
+    }
+
+    /* Red button */
+    .red {
+        background-color: red;
+        color: white;
+    }
+
+    /* Orange button */
+    .orange {
+        background-color: orange;
+        color: white;
+    }
+</style>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+        <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation"> -->
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+          </span>
+            <!-- <a class="nav-item nav-link active" href="#" >Home <span class="sr-only">(current)</span></a> -->
+            <a class="nav-item nav-link" style="color: white;"
+            href="file:///C:/Users/karth/Downloads/PracticeRepo/day11_task/laud-page.html#">Home</a>
+            <a class="nav-item nav-link" style="color: white;"
+            href="file:///C:/Users/karth/Downloads/PracticeRepo/day11_task/laud-page.html#">About</a>
+            <a class="nav-item nav-link" style="color: white;"
+            href="file:///C:/Users/karth/Downloads/PracticeRepo/day11_task/laud-page.html#">Acheivement</a>
+          </div>
+        </div>
+      </nav>
+    <h1>kazi Nazrul Islam</h1>
+    <span>The national poet of Bangladesh</span>
+    <div class="container">
+
+        <h2>Rebel Poet</h2>
+        <img src="image/Palenque.jfif" alt="image">
+        <p>Kazi Nazrul Islam is the national poet of Bangladesh who is especially recognized as a
+            Bidrohi Kobi (rebel poet) around the country. Nazrul is a famous poet, musician and philosopher
+            of Bangladesh. The famous poet Nazrul's writings deal with the revolution of that period of the
+            British government. His revolutionary attempt helped him to be a national poet of Bangladesh.
+            He has raised his voice against any kinds of fascism and oppression and got popularity swiftly around
+            the Indian Subcontinent.</p>
+        <br>
+
+
+        <h2>Awesome Writer</h2>
+        <p>Nazrul's writings explored themes such as love, freedom, humanity, and revolution.
+            He opposed all forms of bigotry and fundamentalism, including religious, caste-based and gerider-based.
+            Throughout his career. Nazrul wrote short stories, novels, and essays but is best known for his songs and
+            poems.
+            He pioneered new music forms such as Bengali ghazals. Nazrul wrote and composed music for nearly 4,000 songs
+            (many recorded on HMV and pramophone records), collectively known as Nazrul Geeti</p>
+        <div id="content">
+            <!-- Buttons -->
+            <button class="button grey">W. Learn More</button>
+            <button class="button red">Videos</button>
+            <button class="button orange">Books</button>
+        </div>
+    </div>
+    <!-- <script src="script.js"></script> -->
+    <span>"Love has no meaning or amount." - Kazi Nazrul Islam</span>
+    <div class="container">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <span class="fa fa-star checked" style="color: black; font-size: large;">Awards</span>
+        <h3></h3>
+        <div class="container" id="container2" >
+            <div>Jagattarini Gold Medal</div>
+            <div>1945</div>
+            <div>From the University of Calcutta for his work in Bengali Literature.</div>
+        </div>
+
+        <div class="container" id="container2">
+            <div>Padma Bhushan</div>
+            <div>1960</div>
+            <div>One of the highest civilian honors of the Republic of India.
+            </div>
+        </div>
+
+        <div class="container" id="container2">
+            <div>National Poet</div>
+            <div>-</div>
+            <div>Conferred the title try the Government of Bangladesh
+            </div>
+        </div>
+
+        <div class="container" id="container2">
+            <div>Ekushey Padak</div>
+            <div>1976</div>
+            <div>Bangladest highest civilian honours.
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="container">
+            <div style="display: flex; justify-content: space-between;">
+                <div>
+                    <h2>Poetry</h2>
+                    <ul>
+                        <li>Agni Biria (The Flery Lute), 1922</li>
+                        <li>Sanchita (Collected poems). 1925</li>
+                        <li>Phanimarasa (The Cactus), 1927</li>
+                        <li>Chakrabak (The Flamingo), 1929</li>
+                        <li>Satbhal Champa (The Seven Brothers of Champal, juvenile poems, 1933</li>
+                        <li>Nirjhar (Fountain 1939)</li>
+                        <li>Natun Chand (The New Moon), 1939</li>
+                        <li>Morubbhaskar (The Sun in the Desert), 1951</li>
+                        <li>Sanchayan Collected Poems), 1955</li>
+                        <li>Nazrul Islam: Istami Kobita (A Collection of Islamic Poems: Dhaka, Bangladesh Islamic Foundation, 1982)</li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>Poems and songs</h2>
+                    <ul>
+                        <li>Dolan Chapa Iname of a faintly fragrant monsoonflower, 1923</li>
+                        <li>Bisher Bashi (The Poison Flutel 1924 Bhangar Gan (The Song of Destruction, 1924 proscribe 1924</li>
+                        <li>Chittanama (On Chittaranjan, 1925</li>
+                        <li>Chhayanat (The Raga of Chhayanal), 1925</li>
+                        <li>Samyabadi (The Proclaimer of Equalis 1926</li>
+                        <li>Puber Hawa (The Eastern Wind 1926</li>
+                        <li>Sarbahara (The Proletariati 1926</li>
+                        <li>Sindhu Hindel (The Undulation of the Seal, 1927</li>
+                        <li>Anjir (Chain). 1928</li>
+                        <li>Pralaya Shikha (Doomsday Flame), 1930 proscribed in 1830</li>
+                        <li>Shesh Saogst (The Last Offerings), 1958</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="container" id="container3" >
+            <div>About the author</div>
+            <div>Made by Md. Abu Taher for a Freecodecamp tribute challenge</div>
+        </div>
+
+        <div class="container" id="container3" >
+            <div>Techs Used</div>
+            <div>Sementic UI</div>
+        </div>
+
+        <div class="container" id="container3" >
+            <div>Content Disclaimer</div>
+            <div>The content of this website is mostly copied from <a href="#" style="color: blue;">Wikipedia,</a></div>
+            <div><a href="#" style="color: blue;">BiographyBD, Thefamouspeople.</a> Original credits goes to the</div>
+            <div>respective authors.</div>
+        </div>
+
+
+    </footer>
+</body>
+
+</html>

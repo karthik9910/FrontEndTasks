@@ -1,0 +1,320 @@
+    <!DOCTYPE html>
+    <html>
+
+    <head>
+        <title>Survey-Form</title>
+
+
+        <style>
+            .required:after {
+                content: " *";
+                color: red;
+            }
+
+            label[class="required"] {
+                font-weight: bold;
+                font-size: large;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            label[for="comments"] {
+                font-weight: bold;
+                font-size: large;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            label[id=last] {
+                margin-left: 200px;
+                padding-left: 95px;
+            }
+
+            input[type="text"]
+            {
+                width: 20%;
+                padding: 5px;
+            }
+
+            input[type="email"] {
+                width: 40%;
+                padding: 5px;
+            }
+
+            textarea {
+                width: 100%;
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                box-sizing: border-box;
+            }
+
+            .fa {
+                color: gray;
+            }
+
+            .checked {
+                color: orange;
+            }
+
+            input[type="submit"]:hover {
+                background-color: gray;
+            }
+
+            /* Style for table-striped */
+            .table-striped tbody tr:nth-child(odd) {
+                background-color: #f9f9f9;
+            }
+
+        </style>
+
+        <script>
+            // Function to handle star rating
+            function rateStar(starCount) {
+                var stars = document.getElementsByClassName("fa-star");
+
+                // Loop through all stars
+                for (var i = 0; i < stars.length; i++) {
+                    if (i < starCount) {
+                        // Add checked class to selected stars
+                        stars[i].classList.add("checked");
+                    } else {
+                        // Remove checked class from unselected stars
+                        stars[i].classList.remove("checked");
+                    }
+                }
+
+                // Update selected rating
+                document.getElementById("selectedRating").innerText = starCount;
+            }
+        </script>
+
+    </head>
+
+    <body>
+        <div class="container">
+            <form type="Survey-Form" id="Survey-Form" autocomplete="on" validate>
+                <label for="name" class="required">Name</label><br>
+                <input type="text" id="firstname" name="firstname" />
+                <input type="text" id="lastname" name="lastname" />
+                <br>
+                <label for="name" id="first">first</label>
+                <label for="name" id="last">last</label>
+                <br><br>
+                <label for="email" class="required">Email</label><br>
+                <input type="email" id="email" name="email" />
+                <br><br>
+                <label for="rating" class="required">Your Experience</label><br>
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+                <div id="ratingStars">
+                    <!-- Five star rating -->
+                    <span class="fa fa-star" onclick="rateStar(1)"></span>
+                    <span class="fa fa-star" onclick="rateStar(2)"></span>
+                    <span class="fa fa-star" onclick="rateStar(3)"></span>
+                    <span class="fa fa-star" onclick="rateStar(4)"></span>
+                    <span class="fa fa-star" onclick="rateStar(5)"></span>
+                </div>
+                <p>Overall, how would you rate you experience with us?</p><br>
+                <label for="rating" class="required">How satisfied are you with</label><br>
+            
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+                <table class="table table-striped">
+                    <tr>
+                        <td></td>
+                        <td> <span class="radio-label-first">Very Unsatisfied</span></td>
+                        <td> <span class="radio-label-common">Unsatisfied</span></td>
+                        <td> <span class="radio-label-common">Neutral</span></td>
+                        <td> <span class="radio-label-common">Satisfied</span></td>
+                        <td><span class="radio-label-common">Very Satisfied</span></td>
+                    </tr>
+                    <tr>
+                        <td><label for="Purchase" id="Purchase">Purchase</label></td>
+                        <td>
+                            <div class="radio-container">
+                                <input type="radio" id="Very-Unsatisfied-Purchase" name="radioPurchase" class="radio-input" />
+                            </div>
+                        </td>
+                        <td>
+                            <div class="radio-container">
+                                <input type="radio" id="Unsatisfied-Purchase" name="radioPurchase" class="radio-input" />
+                            </div>
+                        </td>
+                        <td>
+                            <div class="radio-container">
+                                <input type="radio" id="Neutral-Purchase" name="radioPurchase" class="radio-input" />
+                            </div>
+                        </td>
+                        <td>
+                            <div class="radio-container">
+                                <input type="radio" id="Satisfied-Purchase" name="radioPurchase" class="radio-input" />
+                            </div>
+                        </td>
+                        <td>
+                            <div class="radio-container">
+                                <input type="radio" id="Very-Satisfied-Purchase" name="radioPurchase" class="radio-input" />
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="Service" id="Service">Service</label></td>
+                        <td>
+                            <div class="radio-container">
+                                <input type="radio" id="Very-Unsatisfied-Service" name="radioService" class="radio-input" />
+                            </div>
+                        </td>
+                        <td>
+                            <div class="radio-container">
+                                <input type="radio" id="Unsatisfied-Service" name="radioService" class="radio-input" />
+                            </div>
+                        </td>
+                        <td>
+                            <div class="radio-container">
+                                <input type="radio" id="Neutral-Service" name="radioService" class="radio-input" />
+                            </div>
+                        </td>
+                        <td>
+                            <div class="radio-container">
+                                <input type="radio" id="Satisfied-Service" name="radioService" class="radio-input" />
+                            </div>
+                        </td>
+                        <td>
+                            <div class="radio-container">
+                                <input type="radio" id="Very-Satisfied-Service" name="radioService" class="radio-input" />
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="Company Overall" id="CompanyOverall">Company Overall</label></td>
+                        <td>
+                            <div class="radio-container">
+                                <input type="radio" id="Very-Unsatisfied-CompanyOverall" name="radioCompanyOverall" class="radio-input" />
+                            </div>
+                        </td>
+                        <td>
+                            <div class="radio-container">
+                                <input type="radio" id="Unsatisfied-CompanyOverall" name="radioCompanyOverall" class="radio-input" />
+                            </div>
+                        </td>
+                        <td>
+                            <div class="radio-container">
+                                <input type="radio" id="Neutral-CompanyOverall" name="radioCompanyOverall" class="radio-input" />
+                            </div>
+                        </td>
+                        <td>
+                            <div class="radio-container">
+                                <input type="radio" id="Satisfied-CompanyOverall" name="radioCompanyOverall" class="radio-input" />
+                            </div>
+                        </td>
+                        <td>
+                            <div class="radio-container">
+                                <input type="radio" id="Very-Satisfied-CompanyOverall" name="radioCompanyOverall" class="radio-input" />
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                
+                <br>
+                <label for="rating" class="required">How likely are you to</label><br>
+            
+                <table class="table table-striped">
+                    <tr>
+                    <td></td> <!-- Empty cell for alignment -->
+                    <td><span class="radio-label">Very Unlikely</span></td>
+                    <td><span class="radio-label">Unlikely</span></td>
+                    <td><span class="radio-label">Neutral</span></td>
+                    <td><span class="radio-label">Likely</span></td>
+                    <td><span class="radio-label">Very likely</span></td>
+                    </tr>
+                    <tr>
+                        <td><label for="Buyfromusagain" id="Buyfromusagain">Buy from us again</label></td>
+                        <td>
+                            <div class="radio-container">
+                                <input type="radio" id="Very-Unlikely-Buy" name="Buyfromusagain" class="radio-input" />
+                            </div>
+                        </td>
+                        <td>
+                            <div class="radio-container">
+                                <input type="radio" id="Unlikely-Buy" name="Buyfromusagain" class="radio-input" />
+                            </div>
+                        </td>
+                        <td>
+                            <div class="radio-container">
+                                <input type="radio" id="Neutral-Buy" name="Buyfromusagain" class="radio-input" />
+                            </div>
+                        </td>
+                        <td>
+                            <div class="radio-container">
+                                <input type="radio" id="Likely-Buy" name="Buyfromusagain" class="radio-input" />
+                            </div>
+                        </td>
+                        <td>
+                            <div class="radio-container">
+                                <input type="radio" id="Very-Likely-Buy" name="Buyfromusagain" class="radio-input" />
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="Recommededourproducttoothers" id="Recommededourproducttoothers">Recommended our product to others</label></td>
+                        <td>
+                            <div class="radio-container">
+                                <input type="radio" id="Very-Unlikely-Product" name="Recommededourproducttoothers" class="radio-input" />
+                            </div>
+                        </td>
+                        <td>
+                            <div class="radio-container">
+                                <input type="radio" id="Unlikely-Product" name="Recommededourproducttoothers" class="radio-input" />
+                            </div>
+                        </td>
+                        <td>
+                            <div class="radio-container">
+                                <input type="radio" id="Neutral-Product" name="Recommededourproducttoothers" class="radio-input" />
+                            </div>
+                        </td>
+                        <td>
+                            <div class="radio-container">
+                                <input type="radio" id="Likely-Product" name="Recommededourproducttoothers" class="radio-input" />
+                            </div>
+                        </td>
+                        <td>
+                            <div class="radio-container">
+                                <input type="radio" id="Very-Likely-Product" name="Recommededourproducttoothers" class="radio-input" />
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="Recommededourcompanytoothers" id="Recommededourcompanytoothers">Recommended our company to others</label></td>
+                        <td>
+                            <div class="radio-container">
+                                <input type="radio" id="Very-Unlikely-Company" name="Recommededourcompanytoothers" class="radio-input" />
+                            </div>
+                        </td>
+                        <td>
+                            <div class="radio-container">
+                                <input type="radio" id="Unlikely-Company" name="Recommededourcompanytoothers" class="radio-input" />
+                            </div>
+                        </td>
+                        <td>
+                            <div class="radio-container">
+                                <input type="radio" id="Neutral-Company" name="Recommededourcompanytoothers" class="radio-input" />
+                            </div>
+                        </td>
+                        <td>
+                            <div class="radio-container">
+                                <input type="radio" id="Likely-Company" name="Recommededourcompanytoothers" class="radio-input" />
+                            </div>
+                        </td>
+                        <td>
+                            <div class="radio-container">
+                                <input type="radio" id="Very-Likely-Company" name="Recommededourcompanytoothers" class="radio-input" />
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                
+                <br>
+                <label for="comments">Additional comments or suggestions</label><br>
+                <textarea type="Message" type="text" name="Message" rows="5" maxlength="500"></textarea><br>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </body>
+
+    </html>
